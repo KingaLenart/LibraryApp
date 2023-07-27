@@ -1,4 +1,7 @@
-﻿using LibraryApp.Core.SQL.Configurations;
+﻿using LibraryApp.Core.Models.Authentication;
+using LibraryApp.Core.SQL.Configurations;
+using LibraryApp.Core.SQL.Configurations.Roles;
+using LibraryApp.Core.SQL.Seeds;
 using Microsoft.EntityFrameworkCore;
 
 namespace LibraryApp.Core.SQL
@@ -14,8 +17,10 @@ namespace LibraryApp.Core.SQL
             modelBuilder.ApplyConfiguration(new BookConfiguration());
             modelBuilder.ApplyConfiguration(new UserConfiguration());
             modelBuilder.ApplyConfiguration(new BorrowBookConfiguration());
-
+            modelBuilder.Entity<RoleEntity>().HasData(RolesSeed.RoleSeed);
+            modelBuilder.ApplyConfiguration(new RoleConfiguration());
             base.OnModelCreating(modelBuilder);
+
         }
     }
 }
