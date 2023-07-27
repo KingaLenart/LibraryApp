@@ -1,3 +1,4 @@
+using LibraryApp.Core.Services.DI;
 using LibraryApp.Core.SQL.DI;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,6 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddLibraryDatabase(builder.Configuration);
+
+//LibraryServicesDI.AddLibraryServices(builder.Services);
+builder.Services.AddLibraryServices();
 
 var app = builder.Build();
 

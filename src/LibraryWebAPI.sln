@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApp.Core.SQL", "Libr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryWebAPI", "LibraryWebAPI\LibraryWebAPI.csproj", "{175925DA-BA6A-4F72-AA64-3E343CBA69A1}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryApp.Core.Domain", "LibraryApp.Core.Domain\LibraryApp.Core.Domain.csproj", "{3C40B15E-DC97-4A3D-8D78-3147F4B39B25}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LibraryApp.Core.Services", "LibraryApp.Core.Services\LibraryApp.Core.Services.csproj", "{1AE62C41-0DC6-4EC1-85FC-7A1FB77A9723}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{175925DA-BA6A-4F72-AA64-3E343CBA69A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{175925DA-BA6A-4F72-AA64-3E343CBA69A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{175925DA-BA6A-4F72-AA64-3E343CBA69A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C40B15E-DC97-4A3D-8D78-3147F4B39B25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C40B15E-DC97-4A3D-8D78-3147F4B39B25}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C40B15E-DC97-4A3D-8D78-3147F4B39B25}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C40B15E-DC97-4A3D-8D78-3147F4B39B25}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AE62C41-0DC6-4EC1-85FC-7A1FB77A9723}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AE62C41-0DC6-4EC1-85FC-7A1FB77A9723}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AE62C41-0DC6-4EC1-85FC-7A1FB77A9723}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AE62C41-0DC6-4EC1-85FC-7A1FB77A9723}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

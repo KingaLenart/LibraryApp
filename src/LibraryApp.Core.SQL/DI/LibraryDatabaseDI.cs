@@ -10,13 +10,19 @@ namespace LibraryApp.Core.SQL.DI
         {
             services.AddDbContext<LibraryDatabaseContext>(options =>
             options.UseSqlServer(
-                configuration.GetConnectionString("Sql"),
+                configuration["Sql"],
                 providerOptions =>
             {
                 providerOptions.MigrationsAssembly("LibraryApp.Core.SQL");
                 providerOptions.CommandTimeout(600);
                 providerOptions.UseQuerySplittingBehavior(QuerySplittingBehavior.SplitQuery);
             }), ServiceLifetime.Scoped);
+
+            using (var scope = services.BuildServiceProvider().CreateScope())
+            {
+                var context = scope.ServiceProvider.GetRequiredService<LibraryDatabaseContext>();
+                context.Database.Migrate();
+            }
         }
     }
 }

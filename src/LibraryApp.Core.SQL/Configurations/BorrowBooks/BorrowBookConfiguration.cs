@@ -25,6 +25,7 @@ namespace LibraryApp.Core.SQL.Configurations
                 .HasForeignKey(borrowedBook => borrowedBook.BookId)
                 .IsRequired();
 
+            builder.Property(borrowedBook => borrowedBook.ReturnedDate);
         }
     }
 
